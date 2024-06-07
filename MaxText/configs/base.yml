@@ -129,9 +129,9 @@ logical_axis_rules: [
                       ['norm', 'tensor'],
                       ['heads', ['tensor', 'autoregressive']],
                       ['kv', []],
-                      ['cache_batch', ['autoregressive', 'tensor']],
+                      ['cache_batch', []],
                       ['cache_heads', []],
-                      ['cache_kv', []],
+                      ['cache_kv', ['autoregressive', 'tensor']],
                       ['cache_sequence', []],
                     ]
 data_sharding: [['data', 'fsdp', 'fsdp_transpose', 'sequence', 'tensor', 'autoregressive']]
